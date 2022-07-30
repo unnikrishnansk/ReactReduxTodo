@@ -19,6 +19,16 @@
       "title": "redux",
       "status": false,
       "id": 4
+    },
+    {
+      "title": "react-redux",
+      "status": false,
+      "id": 5
+    },
+    {
+      "title": "axios",
+      "status": false,
+      "id": 6
     }
   ]
 }

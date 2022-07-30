@@ -1,7 +1,8 @@
 import * as data from "./actionTypes";
+import { loaddata , savedata } from "../../utils/accesslocalstorage";
 
 const initialstate = {
-    todos : [],
+    todos : loaddata("todo") || [],
     isloading : false,
     iserror : false,
 }
@@ -17,6 +18,7 @@ const reducer = (oldstate = initialstate, action) => {
             };
 
             case data.GET_TODO_SUCCESS:
+                savedata("todo",payload);
             return{
                 ...oldstate, isloading : false, iserror : false, todos:[...payload],
             };
