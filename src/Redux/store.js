@@ -5,6 +5,6 @@ import { reducer as Authreducer } from './Authreducer/reducer';
 
 const rootReducer = combineReducers({Appreducer,Authreducer})
 
-const store = legacy_createStore(rootReducer);
+const store = legacy_createStore(rootReducer,window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
 export {store};
